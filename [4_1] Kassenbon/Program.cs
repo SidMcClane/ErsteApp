@@ -27,7 +27,7 @@ namespace _4_1__Kassenbon {
             Console.Clear();
 
             Console.WriteLine("Erstelle einen Kassenbon\n");
-            Console.WriteLine("Ich packe meine Koffer und gehe Einkaufen...\n" +
+            Console.WriteLine("Ich packe meinen Koffer und gehe Einkaufen...\n" +
                 "Ich brauche Wurst, Käse, Brot und nen geilen Film auf DVD!\n" +
                 "Für das alles hab ich noch {0:f2} EUR einstecken.", bargeld);
 
@@ -55,7 +55,6 @@ namespace _4_1__Kassenbon {
             anzDvd = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
 
-
             float gesWurst = preisWurst * anzWurst;
             float gesKaese = preisKaese * anzKaese;
             float gesBrot = preisBrot * anzBrot;
@@ -63,6 +62,45 @@ namespace _4_1__Kassenbon {
 
             float gesBon = gesWurst + gesKaese + gesBrot + gesDvd;
             float rueckgeld = bargeld - gesBon;
+
+            while (gesBon > bargeld) {
+                Console.WriteLine("Der Einkauf würde {0:f2} EUR kosten und ich hab leider nur {1:f2} EUR einstecken.\n" +
+                    "Ich muss mein Einkauf anpassen.", gesBon, bargeld);
+
+                Console.Write("AnyKey");
+                Console.ReadKey();
+                Console.Clear();
+
+                Console.WriteLine("Die Wurst kostet {0:f2} EUR und ich wollte {1} Stück mitnehmen", preisWurst, anzWurst);
+                Console.Write("Anzahl ändern auf: ");
+                    anzWurst = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+
+                Console.WriteLine("Der Käse kostet {0:f2} EUR und ich wollte {1} Stück mitnehmen", preisKaese, anzKaese);
+                Console.Write("Anzahl eingeben: ");
+                anzKaese = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+
+                Console.WriteLine("Das Brot kostet {0:f2} EUR und ich wollte {1} Stück mitnehmen", preisBrot, anzBrot);
+                Console.Write("Anzahl eingeben: ");
+                anzBrot = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+
+                Console.WriteLine("Die DVD kostet {0:f2} EUR und ich wollte {1} Stück mitnehmen", preisDvd, anzDvd);
+                Console.Write("Anzahl eingeben: ");
+                anzDvd = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+            
+                gesWurst = preisWurst * anzWurst;
+                gesKaese = preisKaese * anzKaese;
+                gesBrot = preisBrot * anzBrot;
+                gesDvd = preisDvd * anzDvd;
+
+                gesBon = gesWurst + gesKaese + gesBrot + gesDvd;
+                rueckgeld = bargeld - gesBon;
+            }
+
+
             
             Console.WriteLine("\n\n\n" +
                 "************************************\n" +
