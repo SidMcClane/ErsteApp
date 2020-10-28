@@ -73,7 +73,7 @@ namespace _4_1__Kassenbon {
 
                 Console.WriteLine("Die Wurst kostet {0:f2} EUR und ich wollte {1} Stück mitnehmen", preisWurst, anzWurst);
                 Console.Write("Anzahl ändern auf: ");
-                    anzWurst = Convert.ToInt32(Console.ReadLine());
+                anzWurst = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
 
                 Console.WriteLine("Der Käse kostet {0:f2} EUR und ich wollte {1} Stück mitnehmen", preisKaese, anzKaese);
@@ -100,8 +100,6 @@ namespace _4_1__Kassenbon {
                 rueckgeld = bargeld - gesBon;
             }
 
-
-            
             Console.WriteLine("\n\n\n" +
                 "************************************\n" +
                 "* Kassenbon\n*\n" +
