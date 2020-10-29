@@ -50,12 +50,12 @@ namespace TemperaturRechner {
                 "** [4] Réaumur\n" +
                 "***********************************************************************\n");
             string tempEinheit;
-            int tempWert;
+            float tempWert;
 
             Console.Write("** Nummer eingeben: ");
             tempEinheit = Console.ReadLine();
             Console.Write("** Temperatur eingeben: ");
-            tempWert = Convert.ToInt32(Console.ReadLine());
+            tempWert = (float) Convert.ToDouble(Console.ReadLine());
 
             switch (tempEinheit) {
                 case "1":

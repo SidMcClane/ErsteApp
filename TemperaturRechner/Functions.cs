@@ -27,19 +27,19 @@ namespace TemperaturRechner {
                 convInKelvin, convInCelsius, convInFahrenheit, convInReaumur);
         }
 
-        public static void tempKelvin(int tempWert) {
+        public static void tempKelvin(float tempWert) {
 
             mainUmrechner(tempWert);
         }
-        public static void tempCelsius(int tempWert) {
+        public static void tempCelsius(float tempWert) {
             float convInKelvin = tempWert + 273.15f;
             mainUmrechner(convInKelvin);
         }
-        public static void tempFahrenheit(int tempWert) {
+        public static void tempFahrenheit(float tempWert) {
             float convInKelvin = (tempWert + 459.67f) * 5 / 9;
             mainUmrechner(convInKelvin);
         }
-        public static void tempReaumur(int tempWert) {
+        public static void tempReaumur(float tempWert) {
             float convInKelvin = tempWert * 1.25f + 273.15f;
             mainUmrechner(convInKelvin);
         }
