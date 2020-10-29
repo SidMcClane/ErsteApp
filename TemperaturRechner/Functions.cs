@@ -23,6 +23,8 @@ namespace TemperaturRechner {
                 "** \tCelsius\t\t|\t{1:f2}\n" +
                 "** \tFahrenheit\t|\t{2:f2}\n" +
                 "** \tRéaumur\t\t|\t{3:f2}\n" +
+                "** \n" +
+                "** \n" +
                 "** \n",
                 convInKelvin, convInCelsius, convInFahrenheit, convInReaumur);
         }
