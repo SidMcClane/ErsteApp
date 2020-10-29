@@ -120,7 +120,7 @@ namespace _4_1__Kassenbon {
                 anzDvd, preisDvd, gesDvd,
                 gesBon, bargeld, rueckgeld);
 
-
+            Console.ReadKey();
             
 
         }

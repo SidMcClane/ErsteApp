@@ -125,6 +125,8 @@ namespace Bedingte_Formatierung {
             Console.WriteLine("i hat den Wert " + i);
             Console.WriteLine("Testaufgabe mit NewLine und Tabulator:\n\t" + i + "\n\t" + j);
             Console.WriteLine("Feste Breite:\n {0,20}\n {1,10}" + "\nTabulatoren:\n\t {2}\n\t {3}", i, j, i, j);
+
+            Console.ReadKey();
         }
     }
 }

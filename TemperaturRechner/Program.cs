@@ -36,7 +36,6 @@ namespace TemperaturRechner {
             // ** 
             // ** 
             // ** 
-
             
 
             Console.Write(
@@ -78,7 +77,7 @@ namespace TemperaturRechner {
                     break;
 
             }
-
+            Console.ReadKey();
 
 
 
