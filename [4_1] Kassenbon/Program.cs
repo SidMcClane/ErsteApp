@@ -3,13 +3,14 @@
 namespace _4_1__Kassenbon {
     class Program {
         static void Main(string[] args) {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("LalaLand\n");
 
             // PDF4 Einführung Variablen
             // Aufgabe I - Erstelle einen Kassenbon
 
             // *********************************************
-
+                        
             float bargeld = 50.00f;
 
             int anzWurst = 0;
