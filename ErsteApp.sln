@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "[3_1] bedingte Anweisungen", "ErsteApp\[3_1] bedingte Anweisungen.csproj", "{B2432BEF-6100-42AD-825E-07A5A1E5F561}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormÜbung", "WinFormÜbung\WinFormÜbung.csproj", "{815F87A0-0CB2-4A51-BE9A-140D5D86B62E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B2432BEF-6100-42AD-825E-07A5A1E5F561}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2432BEF-6100-42AD-825E-07A5A1E5F561}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2432BEF-6100-42AD-825E-07A5A1E5F561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{815F87A0-0CB2-4A51-BE9A-140D5D86B62E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{815F87A0-0CB2-4A51-BE9A-140D5D86B62E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{815F87A0-0CB2-4A51-BE9A-140D5D86B62E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{815F87A0-0CB2-4A51-BE9A-140D5D86B62E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
