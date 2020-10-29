@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace ErsteApp {
+namespace Bedingte_Formatierung {
     class Program {
         static void Main(string[] args) {
             
@@ -34,7 +34,6 @@ namespace ErsteApp {
             // Erste Aufgabe
             int zahl_A = 3;
             int zahl_B = 5;
-            int zahl_C = 4;
             Console.WriteLine("Erste Zahl lautet " + zahl_A + " / die zweite Zahl lautet " + zahl_B);
 
             if (zahl_A < zahl_B) {
@@ -121,6 +120,11 @@ namespace ErsteApp {
                 default:
                     break;
             }
+            // PDF3_2 Formatierte Ausgabe WriteLine
+            int i = 42; int j = 1337;
+            Console.WriteLine("i hat den Wert " + i);
+            Console.WriteLine("Testaufgabe mit NewLine und Tabulator:\n\t" + i + "\n\t" + j);
+            Console.WriteLine("Feste Breite:\n {0,20}\n {1,10}" + "\nTabulatoren:\n\t {2}\n\t {3}", i, j, i, j);
         }
     }
 }
