@@ -1,9 +1,14 @@
 ﻿using System;
+using System.Linq.Expressions;
 
 namespace TemperaturRechner {
     class Program {
         static void Main(string[] args) {
-            Console.WriteLine("Hello World!");
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            // Console.WriteLine("Hello World!");
+
+
 
             // Funktionen schreiben für jede Ausgangseinheit (Bspw. Ausgangseinheit: Celsius -> Function -> Fahrenheit -> Function -> Ausgabe alle anderen Werte)
             // Um es besser Erweiterbar zu gestalten wandelt die Function für C aus dem Bsp. die Temperatur nur in Kelvin um und eine weitere Function berechnet daraus alles andere.
@@ -27,12 +32,59 @@ namespace TemperaturRechner {
             // **       Kelvin        |   0
             // **       Celsius       |   -273,15
             // **       Fahrenheit    |   -459,67
-            // **       Réumur        |   -218,52
+            // **       Réaumur       |   -218,52
             // ** 
             // ** 
             // ** 
 
+            
 
+            Console.Write(
+                "***********************************************************************\n" +
+                "**\t\t\tTemperatur-Umrechner\n" +
+                "***********************************************************************\n" +
+                "** Bitte gib die Zahl an um welche Ausgangstemperatur es sich handelt.\n" +
+                "** [1] Kelvin\n" +
+                "** [2] Celsius\n" +
+                "** [3] Fahrenheit\n" +
+                "** [4] Réaumur\n" +
+                "***********************************************************************\n");
+            string tempEinheit;
+            int tempWert;
+
+            Console.Write("** Nummer eingeben: ");
+            tempEinheit = Console.ReadLine();
+            Console.Write("** Temperatur eingeben: ");
+            tempWert = Convert.ToInt32(Console.ReadLine());
+
+            switch (tempEinheit) {
+                case "1":
+                    Functions.tempKelvin(tempWert);
+
+                    break;
+                case "2":
+                    Functions.tempCelsius(tempWert);
+
+                    break;
+                case "3":
+                    Functions.tempFahrenheit(tempWert);
+
+                    break;
+                case "4":
+                    Functions.tempReaumur(tempWert);
+
+                    break;
+                default:
+                    break;
+
+            }
+
+
+
+
+
+
+            
 
 
 

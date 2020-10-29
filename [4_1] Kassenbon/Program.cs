@@ -2,7 +2,7 @@
 
 namespace _4_1__Kassenbon {
     class Program {
-        static void Main(string[] args) {
+        static void Main(string[] args) {            
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("LalaLand\n");
 
