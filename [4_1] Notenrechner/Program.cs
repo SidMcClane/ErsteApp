@@ -54,8 +54,18 @@ namespace Notenrechner {
                         "**\n" +
                         "** Die mximal zu erreichenden Punkte sind 60\n" +
                         "** Gib deine Punkte ein: ");
-                    punkte = Convert.ToDouble(Console.ReadLine());
-                
+                    
+
+                    string userInput = Console.ReadLine();
+                    //punkte = Convert.ToDouble(Console.ReadLine());
+                    if (string.IsNullOrEmpty(userInput)) {
+                        Console.WriteLine("** Keine Eingabe erkannt!\n** Punkte werden auf 0 gesetzt!");
+                        punkte = 0;
+                    } else {
+                        punkte = Convert.ToDouble(userInput);
+                    }
+
+
                     if (punkte > 60) {
                         Console.Write("**\n" +
                             "********************************************\n" +
