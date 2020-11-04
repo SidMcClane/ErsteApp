@@ -49,7 +49,7 @@ namespace Notenrechner {
 
                 // Eingabe der Punkte und erste Ausgabe von Text
                 // WHILE Punkte >60 ODER Punkte auf Startwert -1
-                while (punkte > 60 || punkte == -1) {
+                while (punkte > 60 || punkte < 0) {
                     Console.Write("********************************************\n" +
                         "**\n" +
                         "** Die mximal zu erreichenden Punkte sind 60\n" +
@@ -61,6 +61,18 @@ namespace Notenrechner {
                             "********************************************\n" +
                             "**\n" +
                             "** {0} ist über der maximal zu erreichenden Punktezahl.\n" +
+                            "** Bitte gib deine korrekte Punkte ein.\n" +
+                            "**\n" +
+                            "** Beliebige Taste zum Fortfahren...\n" +
+                            "**\n" +
+                            "********************************************", punkte);
+                        Console.ReadKey();
+                        Console.Clear();
+                    } else if (punkte < 0) {
+                        Console.Write("**\n" +
+                            "********************************************\n" +
+                            "**\n" +
+                            "** {0} ist unter der minimal zu erreichenden Punktezahl.\n" +
                             "** Bitte gib deine korrekte Punkte ein.\n" +
                             "**\n" +
                             "** Beliebige Taste zum Fortfahren...\n" +
