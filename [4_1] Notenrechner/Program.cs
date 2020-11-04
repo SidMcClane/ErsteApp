@@ -34,6 +34,11 @@ namespace Notenrechner {
             // Punkte eingeben -> Formel für "Punkte in Note" -> Note Modulo 1 = moduloNote -> mit Case "moduloNote > oder < dann (+) oder (-) UND WENN >=.66 DANN noteGekuerzt +1 + (+) WENN >=.33 DANN noteGekuerzt + (-)
 
 
+            // #####################################################################################
+            // CODE START
+            // #####################################################################################
+
+            // Solange BOOL auf TRUE steht wird das Programm wiederholt
             bool wiederholung = true;
 
             while (wiederholung == true) {
@@ -55,17 +60,20 @@ namespace Notenrechner {
                         "** Die mximal zu erreichenden Punkte sind 60\n" +
                         "** Gib deine Punkte ein: ");
                     
-
+                    // Check ob eine Eingabe getätigt wurde - wenn nicht dann wird "punkte" auf "0" gesetzt und das Programm weiter ausgeführt
+                    // wenn eine Eingabe erkannt wurde dann wird sie erst im zweiten Schritt (else) in Double Converted
                     string userInput = Console.ReadLine();
                     //punkte = Convert.ToDouble(Console.ReadLine());
                     if (string.IsNullOrEmpty(userInput)) {
-                        Console.WriteLine("** Keine Eingabe erkannt!\n** Punkte werden auf 0 gesetzt!");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("**\n** Keine Eingabe erkannt!\n** Punkte werden auf 0 gesetzt!\n**");
+                        Console.ForegroundColor = ConsoleColor.Green;
                         punkte = 0;
                     } else {
                         punkte = Convert.ToDouble(userInput);
                     }
 
-
+                    // Abfrage ob der Punktebereich zwischen 0 und 60 liegt mit entsprechender Meldung
                     if (punkte > 60) {
                         Console.Write("**\n" +
                             "********************************************\n" +
@@ -92,6 +100,10 @@ namespace Notenrechner {
                         Console.Clear();
                     }
                 }
+
+                // #####################################################################################
+                // AFTER INPUT CHECK
+                // #####################################################################################
 
                 // Berechnung der benötigten Werte und Initialisierung der Variablen
                 note = (60 - punkte) / 10 + 1;
