@@ -57,7 +57,7 @@ namespace Notenrechner {
                 while (punkte > 60 || punkte < 0) {
                     Console.Write("********************************************\n" +
                         "**\n" +
-                        "** Die mximal zu erreichenden Punkte sind 60\n" +
+                        "** Die maximal zu erreichenden Punkte sind 60\n" +
                         "** Gib deine Punkte ein: ");
                     
                     // Check ob eine Eingabe getätigt wurde - wenn nicht dann wird "punkte" auf "0" gesetzt und das Programm weiter ausgeführt
@@ -128,6 +128,7 @@ namespace Notenrechner {
                         noteTemp = noteGekuerzt;
                     }
                 }
+
 
                 // Note ausgeschrieben 
                 switch (noteTemp) {
