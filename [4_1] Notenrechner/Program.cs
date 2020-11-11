@@ -60,17 +60,27 @@ namespace Notenrechner {
                         "** Die maximal zu erreichenden Punkte sind 60\n" +
                         "** Gib deine Punkte ein: ");
                     
-                    // Check ob eine Eingabe getätigt wurde - wenn nicht dann wird "punkte" auf "0" gesetzt und das Programm weiter ausgeführt
-                    // wenn eine Eingabe erkannt wurde dann wird sie erst im zweiten Schritt (else) in Double Converted
+                    // Check ob eine Eingabe getätigt wurde
+                    // wenn keine Eingabe oder keine Zahlen dann werden "punkte" auf "0" gesetzt und das Programm weiter ausgeführt
+                    // wenn eine Eingabe erkannt wurde und es sich um eine Zahl handelt dann wird sie im zweiten Schritt (else if) in Double Converted
                     string userInput = Console.ReadLine();
+                    Console.WriteLine("**");
                     //punkte = Convert.ToDouble(Console.ReadLine());
-                    if (string.IsNullOrEmpty(userInput)) {
+                    if (string.IsNullOrEmpty(userInput))
+                    {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("**\n** Keine Eingabe erkannt!\n** Punkte werden auf 0 gesetzt!\n**");
+                        Console.WriteLine("** Keine Eingabe erkannt!\n** 0 Punkte - Try again!");
                         Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("**");
                         punkte = 0;
-                    } else {
+                    } else if (double.TryParse(userInput, out double result)) {
                         punkte = Convert.ToDouble(userInput);
+                    } else {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("** Gib eine Zahl ein, du Vogel ! ! !\n** 0 Punkte - Try again!");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("**");
+                        punkte = 0;
                     }
 
                     // Abfrage ob der Punktebereich zwischen 0 und 60 liegt mit entsprechender Meldung
@@ -164,13 +174,15 @@ namespace Notenrechner {
                     "**\n" +
                     "** Note: {1} {2}\n" +
                     "**\n" +
-                    "********************************************\n" +
-                    "** ", punkte, ausgabeNote, noteGeschrieben);
+                    "********************************************\n"
+                    , punkte, ausgabeNote, noteGeschrieben);
 
 
                 // Abfrage ob noch eine Note errechnet werden soll
                 // im Falle von "nein" wird der bool-Wert auf false gestellt
-                Console.WriteLine("Um noch eine Note zu berechnen drücke \"y\"\n** oder \"n\" um das Programm zu beenden");
+                Console.WriteLine("" +
+                    "** Um noch eine Note zu berechnen gib \"y\" ein oder drücke Enter.\n" +
+                    "** Um das Programm zu beenden gib \"n\" ein");
                 String whileChar = Console.ReadLine();
                 switch (whileChar) {
                     case "y":
@@ -184,16 +196,7 @@ namespace Notenrechner {
                         Console.Clear();
                         break;
                 }
-
-
-
             }
-
-
-        
-
-
-
         }
     }
 }
