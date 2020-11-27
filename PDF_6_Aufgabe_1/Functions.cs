@@ -266,41 +266,163 @@ namespace PDF_6_Aufgabe_1 {
             Functions.fg_color(defaultColor);
         }
 
-        public static void quadrat(string defaultColor, string colorText) {
+
+        // FORMEN
+        //
+        // Quadrat (mittels zweier Schleifen)
+        public static void quadrat(string defaultColor, string colorText, int size, char zeichen) {
 
             Functions.fg_color(colorText);
-            int size = 10;
+            
 
             // for-Schleife
             for (int x = 0; x < size; x++) {
 
                 for (int y = 0; y < size; y++) {
-                    Console.Write("* ");
+                    Console.Write(zeichen + " ");
                 }
                 Console.Write("\n");
             }
-            Console.Write("\n");
-
+            Console.Write("\n\n");
             Functions.fg_color(defaultColor);
         }
 
-        public static void dreieck_rechts(string defaultColor, string colorText) {
+        // Dreieck RECHTS 
+        public static void dreieck_rechts(string defaultColor, string colorText, int size, char zeichen) {
 
             Functions.fg_color(colorText);
-            int size = 10;
 
             // for-Schleife (Höhe Reihe)
             for (int x = 0; x < size; x++) {
                 // Anzahl Spalten
                 for (int y = 0; y <= x; y++) {
-                    Console.Write("* ");
+                    Console.Write(zeichen + " ");
                 }
 
                 Console.Write("\n");
             }
 
-            Console.Write("\n");
+            Console.Write("\n\n");
+            Functions.fg_color(defaultColor);
+        }
 
+        // Dreieck LINKS
+        public static void dreieck_links(string defaultColor, string colorText, int size, char zeichen) {
+            Functions.fg_color(colorText);
+            int x1, x2, x3, x4;
+
+            // for-Schleife die in zwei Richtungen zählt
+            // max->min und min->max
+            for (x1 = size, x3 = 0; x1 > 0 || x3 <= size; x1--, x3++) { //                  (x3 <= size für die volle Größe)
+
+                // for-Schleife von max->min (fügt Leerzeichen ein bis Zähler auf max)
+                for (x2 = x1; x2 > 0; x2--) {
+                    Console.Write(" " + " ");
+                }
+                // for-Schleife von min->max (fügt Füllzeichen ein bis Zähler auf max)      (x4<=x3 für die volle Größe)
+                for (x4 = 0; x4 <= x3; x4++) {
+                    Console.Write(zeichen + " ");
+                }
+                // neue Zeile
+                Console.Write("\n");
+            }
+            Console.Write("\n\n");
+            Functions.fg_color(defaultColor);
+        }
+
+        // Pyramide
+        public static void pyramide(string defaultColor, string colorText, int size, char zeichen) {
+            Functions.fg_color(colorText);
+            int x1, x2, x3, x4, x5;
+
+            // Dreieck links und rechts werden in einer Schleife zusammengefasst
+            for (x1 = size, x3 = 0; x1 > 0 || x3 < size; x1--, x3++) {
+
+                // Leerzeichen bis zum ersten Füllzeichen
+                for (x2 = x1; x2 > 0; x2--) {
+                    Console.Write(" " + " ");
+                }
+
+                // Füllzeichen linkes Dreieck
+                for (x4 = 0; x4 < x3; x4++) {
+                    Console.Write(zeichen + " ");
+                }
+
+                // einzelnes Füllzeichen zwischen den Dreiecken
+                Console.Write(zeichen + " ");
+
+                //füllzeichen rechtes Dreieck
+                for (x5 = 0; x5 < x3; x5++) {
+                    Console.Write(zeichen + " ");
+                }
+                Console.Write("\n");
+            }
+            Console.Write("\n\n");
+            Functions.fg_color(defaultColor);
+        }
+
+        // Pyramide gespiegelt
+        public static void pyramide_gespiegelt(string defaultColor, string colorText, int size, char zeichen) {
+            Functions.fg_color(colorText);
+            int x1, x2, x3, x4, x5;
+
+            // Haupt for-Schleife
+            for (x1 = 0, x3 = size; x1 < size +1 || x3 > 0; x1++, x3--) {
+
+                // Leerzeichen bis zum ersten Füllzeichen
+                for (x2 = x1; x2 > 0; x2--) {
+                    Console.Write(" " + " ");
+                }
+
+                // linkes Dreieck gespiegelt
+                for (x4 = x3; x4 > 0; x4--) {
+                    Console.Write(zeichen + " ");
+                }
+
+                // einzelnes Füllzeichen zwischen den Dreiecken
+                Console.Write(zeichen + " ");
+
+                // rechtes Dreieck gespiegelt
+                for (x5 = 0; x5 <x3; x5++) {
+                    Console.Write(zeichen + " ");
+                }
+                Console.Write("\n");
+            }
+            Console.Write("\n\n");
+            Functions.fg_color(defaultColor);
+        }
+
+        // Slash (mittels zweier Schleifen)
+        public static void slash(string defaultColor, string colorText, int size, char zeichen) {
+            Functions.fg_color(colorText);
+            int x1, x2;
+
+            // rtretertrete
+            for (x1 = size ; x1 > 0; x1--) {
+
+                for (x2 = x1; x2 > 0; x2-- ) {
+                    Console.Write(" " + " ");
+                }
+                Console.Write(zeichen + "\n");
+            }
+            Console.Write("\n\n");
+            Functions.fg_color(defaultColor);
+        }
+
+        // Backslash (mittels zweier Schleifen)
+        public static void backslash(string defaultColor, string colorText, int size, char zeichen) {
+            Functions.fg_color(colorText);
+            int x1, x2;
+
+            // rtretertrete
+            for (x1 = 0; size > x1; x1++) {
+
+                for (x2 = 0; x1 > x2; x2++) {
+                    Console.Write(" " + " ");
+                }
+                Console.Write(zeichen + "\n");
+            }
+            Console.Write("\n\n");
             Functions.fg_color(defaultColor);
         }
 
