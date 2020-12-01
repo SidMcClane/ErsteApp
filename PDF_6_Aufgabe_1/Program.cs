@@ -3,6 +3,7 @@
 namespace PDF_6_Aufgabe_1 {
     class Program {
 
+        // Hauptmenü
         static void Main(string[] args) {
             bool mainLoop = true;
 
@@ -40,6 +41,7 @@ namespace PDF_6_Aufgabe_1 {
                 }
             }
         }
+
         // [Aufgabe 1] Formen zeichnen mit Schleifen
         public static void ShapeDrawer() {
             // Notizen:
@@ -174,16 +176,7 @@ namespace PDF_6_Aufgabe_1 {
                 }
 
                 Console.Clear();
-
             }
-
-
-
-
-
-
-
-
         }
 
         // [Aufgabe 2] Quadrat und Kubik Rechner
@@ -224,9 +217,9 @@ namespace PDF_6_Aufgabe_1 {
 
         // [Aufgabe 3] Basis Potenz Rechner
         public static void BasisPotenz() {
-            int basis;
-            int potenz;
-            int ergebnis = 0;
+            double basis;
+            double potenz;
+            double ergebnis = 0;
             bool basisPotenzLoop = true;
 
             while (basisPotenzLoop) {
@@ -239,7 +232,7 @@ namespace PDF_6_Aufgabe_1 {
 
                 ergebnis = basis;
 
-                for (int i = potenz; i > 1; i--) {
+                for (double i = potenz; i > 1; i--) {
                     ergebnis = ergebnis * basis; 
                 }
 
