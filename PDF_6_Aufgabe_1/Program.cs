@@ -2,7 +2,46 @@
 
 namespace PDF_6_Aufgabe_1 {
     class Program {
+
         static void Main(string[] args) {
+            bool mainLoop = true;
+
+            while (mainLoop) {
+                Console.Clear();
+
+                // Menue
+                Console.Write("\n\n\n\tHauptmenü\n\n" +
+                    "\t[1]ShapeDrawer\t\t[2]QuadKubRechner\n\n" +
+                    "\t[3]BasisPotenz\t\t[4]Beenden\n\n\t");
+
+                switch (Console.ReadLine()) {
+                    case "1":
+                        Console.Clear();
+                        Program.ShapeDrawer();
+                        break;
+
+                    case "2":
+                        Console.Clear();
+                        Program.QuadKubRechner();
+                        break;
+
+                    case "3":
+                        Console.Clear();
+                        Program.BasisPotenz();
+                        break;
+
+                    case "4":
+                        mainLoop = false;
+                        break;
+
+                    default:
+                        mainLoop = false;
+                        break;
+                }
+            }
+        }
+        // [Aufgabe 1] Formen zeichnen mit Schleifen
+        public static void ShapeDrawer() {
             // Notizen:
             // [1]Black - [2]DarkGray - [3]Gray - [4]DarkBlue - [5]Blue - [6]DarkGreen - [7]Green - [8]DarkCyan - [9]Cyan - [10]DarkRed - [11]Red - [12]DarkMagenta - [13]Magenta - [14]DarkYellow - [15]Yellow - [16]White
 
@@ -24,24 +63,25 @@ namespace PDF_6_Aufgabe_1 {
             int size;                                                           // Form Größe z.B. 5, 10 oder 20
             char zeichen;                                                       // Form Füllzeichen z.B. #, +, *, ...
             string shapeNum;                                                    // Form Nummer
-            bool loop = true;                                                   // ProgramLoop till false
+            bool shapeLoop = true;                                              // ProgramLoop till false
 
             // ###################################################################################################
 
+            Console.Clear();
 
 
             // Welcome - Bild
-            Functions.welcome(defaultColor);
+            Functions.Welcome(defaultColor);
             Console.Write("\n\n\n" +
                 "\tHallo und Herzlich Willkommen bei malen nach Zahlen");
             Console.ReadKey();
             Console.Clear();
 
 
-            while (loop) {
+            while (shapeLoop) {
 
                 // Menue - Bild
-                Functions.menue(defaultColor);
+                Functions.Menue(defaultColor);
             
                 // Menue
                 Console.WriteLine("\tWähle eine Farbe für deine Form aus\n" +
@@ -54,7 +94,7 @@ namespace PDF_6_Aufgabe_1 {
                 Console.Write("\tBitte entsprechende Nummer eingeben: ");
                 colorNum = Console.ReadLine();                                      // Farbnummer (string)
                 // Nummereingabe in ausgeschriebenen Farbnamen umwandeln (string)
-                Functions.figureColor(colorNum, ref colorText);                     // Farbname (string)
+                Functions.FigureColor(colorNum, ref colorText);                     // Farbname (string)
 
                 // Eingabeaufforderung des Füllzeichens
                 Console.Write("\n\tFüllzeichen der Form eingeben: ");
@@ -67,11 +107,11 @@ namespace PDF_6_Aufgabe_1 {
 
 
                 // Menue - Bild
-                Functions.title(defaultColor);
+                Functions.Title(defaultColor);
 
                 // Menue
                 Console.WriteLine("\n\tWähle die gewünschte Form aus\n" +
-                    "\t[1]Quadrat\t[2]Dreieck links\t[3]Dreieck rechts\t[4]Pyramide\t[5]Pyramide gespeigelt\t\n" +
+                    "\t[1]Quadrat\t[2]Dreieck links\t[3]Dreieck rechts\t[4]Pyramide\t[5]Pyramide gespiegelt\t\n" +
                     "\t# #       \t  #             \t#                \t #         \t# #                     \n" +
                     "\t# #       \t# #             \t# #              \t# #        \t #                    \n\n" +
                     "\t[6]Slash  \t[7]Backslash                                                              \n" +
@@ -82,42 +122,42 @@ namespace PDF_6_Aufgabe_1 {
                 Console.Write("\tBitte entsprechende Nummer eingeben: ");
                 shapeNum = Console.ReadLine();
                 Console.Clear();
-                Functions.title(defaultColor);
+                Functions.Title(defaultColor);
                 Console.Write("\n");
 
 
                 // Aufruf der entsprechender Form
                 switch (shapeNum) {
                     case "1":
-                        Functions.quadrat(defaultColor, colorText, size, zeichen);
+                        Functions.Quadrat(defaultColor, colorText, size, zeichen);
                         break;
 
                     case "2":
-                        Functions.dreieck_links(defaultColor, colorText, size, zeichen);
+                        Functions.Dreieck_links(defaultColor, colorText, size, zeichen);
                         break;
 
                     case "3":
-                        Functions.dreieck_rechts(defaultColor, colorText, size, zeichen);
+                        Functions.Dreieck_rechts(defaultColor, colorText, size, zeichen);
                         break;
 
                     case "4":
-                        Functions.pyramide(defaultColor, colorText, size, zeichen);
+                        Functions.Pyramide(defaultColor, colorText, size, zeichen);
                         break;
 
                     case "5":
-                        Functions.pyramide_gespiegelt(defaultColor, colorText, size, zeichen);
+                        Functions.Pyramide_gespiegelt(defaultColor, colorText, size, zeichen);
                         break;
 
                     case "6":
-                        Functions.slash(defaultColor, colorText, size, zeichen);
+                        Functions.Slash(defaultColor, colorText, size, zeichen);
                         break;
 
                     case "7":
-                        Functions.backslash(defaultColor, colorText, size, zeichen);
+                        Functions.Backslash(defaultColor, colorText, size, zeichen);
                         break;
 
                     default:
-                        Functions.fuckfinger(defaultColor);
+                        Functions.Fuckfinger(defaultColor);
                         break;
                 }
 
@@ -125,17 +165,102 @@ namespace PDF_6_Aufgabe_1 {
                 Console.Clear();
 
                 // Welcome - Bild (Abfrage ob man eine weitere Form zeichnen möchte...)
-                Functions.welcome(defaultColor);
+                Functions.Welcome(defaultColor);
                 Console.Write("\n\n\n" +
                     "\tMöchtest du eine weitere Form zeichnen? (y oder n): ");
 
                 if (Console.ReadLine() == "n") {
-                    loop = false;
+                    shapeLoop = false;
                 }
 
                 Console.Clear();
 
             }
+
+
+
+
+
+
+
+
+        }
+
+        // [Aufgabe 2] Quadrat und Kubik Rechner
+        public static void QuadKubRechner() {
+            int basisNum;
+            int quadNum;
+            int kubNum;
+            bool quadkubLoop = true;
+
+
+            while (quadkubLoop) {
+                Console.Clear();
+
+                Console.Write("\n\n\n\tGib eine Basis ein: ");
+                basisNum = Convert.ToInt32(Console.ReadLine());
+
+                quadNum = basisNum * basisNum;
+                kubNum = quadNum * basisNum;
+
+                Console.WriteLine("\n" +
+                    "\tQuadrat:\t" + quadNum + "\n" +
+                    "\tKubik:\t\t" + kubNum + "\n\n");
+
+                Console.Write("\tWillste noch eine machen? (y/n) ");
+                switch (Console.ReadLine()) {
+                    case "n":
+                        quadkubLoop = false;
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+
+
+
+        }
+
+        // [Aufgabe 3] Basis Potenz Rechner
+        public static void BasisPotenz() {
+            int basis;
+            int potenz;
+            int ergebnis = 0;
+            bool basisPotenzLoop = true;
+
+            while (basisPotenzLoop) {
+                Console.Clear();
+
+                Console.Write("\n\n\n\tGib eine Basis ein: ");
+                basis = Convert.ToInt32(Console.ReadLine());
+                Console.Write("\n\tGib eine Potenz ein: ");
+                potenz = Convert.ToInt32(Console.ReadLine());
+
+                ergebnis = basis;
+
+                for (int i = potenz; i > 1; i--) {
+                    ergebnis = ergebnis * basis; 
+                }
+
+
+                Console.WriteLine("\n\tErgebnis: " + ergebnis + "\n\n");
+
+                Console.Write("\tWillste noch eine machen? (y/n) ");
+                switch (Console.ReadLine()) {
+                    case "n":
+                        basisPotenzLoop = false;
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+
+
+
+
+
 
 
 

@@ -6,7 +6,7 @@ namespace PDF_6_Aufgabe_1 {
     class Functions {
 
         // Farbnummer -> Farbname
-        public static void figureColor(string colorNum, ref string colorText) {
+        public static void FigureColor(string colorNum, ref string colorText) {
             
             switch (colorNum) {
                 case "1":
@@ -65,7 +65,7 @@ namespace PDF_6_Aufgabe_1 {
         }
 
         // Schriftfarben
-        public static void fg_color(string fg_color) {
+        public static void FG_color(string fg_color) {
             switch (fg_color) {
                 case "black":
                     Console.ForegroundColor = ConsoleColor.Black;
@@ -122,7 +122,7 @@ namespace PDF_6_Aufgabe_1 {
         }
 
         // Hintergrundfarben
-        public static void bg_color(string bg_color) {
+        public static void BG_color(string bg_color) {
             switch (bg_color) {
                 case "black":
                     Console.BackgroundColor = ConsoleColor.Black;
@@ -179,8 +179,8 @@ namespace PDF_6_Aufgabe_1 {
         }
 
         // Welcome-Titelbild
-        public static void welcome(string defaultColor) {
-            Functions.fg_color("darkred");
+        public static void Welcome(string defaultColor) {
+            Functions.FG_color("darkred");
             Console.WriteLine("\n\n\n" +
                 "       █     █░▓█████  ██▓     ▄████▄   ▒█████   ███▄ ▄███▓▓█████                                     \n" +
                 "      ▓█░ █ ░█░▓█   ▀ ▓██▒    ▒██▀ ▀█  ▒██▒  ██▒▓██▒▀█▀ ██▒▓█   ▀                                     \n" +
@@ -194,12 +194,12 @@ namespace PDF_6_Aufgabe_1 {
                 "                              ░                                                                       \n");
             // Quelle : https://patorjk.com/software/taag/#p=display&h=0&w=%20&f=Bloody&t=welcome
 
-            Functions.fg_color(defaultColor);
+            Functions.FG_color(defaultColor);
         }
 
         // Menue-Titelbild
-        public static void menue(string defaultColor) {
-            Functions.fg_color("darkred");
+        public static void Menue(string defaultColor) {
+            Functions.FG_color("darkred");
             Console.WriteLine("\n\n\n" +
                 "       ███▄ ▄███▓▓█████  ███▄    █  █    ██ ▓█████                                                    \n" +
                 "      ▓██▒▀█▀ ██▒▓█   ▀  ██ ▀█   █  ██  ▓██▒▓█   ▀                                                    \n" +
@@ -212,12 +212,12 @@ namespace PDF_6_Aufgabe_1 {
                 "             ░      ░  ░         ░    ░        ░  ░                                                   \n");
             // Quelle : https://patorjk.com/software/taag/#p=display&h=0&w=%20&f=Bloody&t=menue
 
-            Functions.fg_color(defaultColor);
+            Functions.FG_color(defaultColor);
         }
 
         // Bilder malen-Titelbild
-        public static void title(string defaultColor) {
-            Functions.fg_color("darkred");
+        public static void Title(string defaultColor) {
+            Functions.FG_color("darkred");
             Console.WriteLine("\n\n\n" +
                 "       ▄▄▄▄    ██▓ ██▓    ▓█████▄ ▓█████  ██▀███      ███▄ ▄███▓ ▄▄▄       ██▓    ▓█████  ███▄    █   \n" +
                 "      ▓█████▄ ▓██▒▓██▒    ▒██▀ ██▌▓█   ▀ ▓██ ▒ ██▒   ▓██▒▀█▀ ██▒▒████▄    ▓██▒    ▓█   ▀  ██ ▀█   █   \n" +
@@ -231,12 +231,12 @@ namespace PDF_6_Aufgabe_1 {
                 "            ░              ░                                                                          \n");
             // Quelle : https://patorjk.com/software/taag/#p=display&h=0&w=%20&f=Bloody&t=bilder malen
 
-            Functions.fg_color(defaultColor);
+            Functions.FG_color(defaultColor);
         }
 
         // Blutiger Mittelfinger
-        public static void fuckfinger(string defaultColor) {
-            Functions.fg_color("darkred");
+        public static void Fuckfinger(string defaultColor) {
+            Functions.FG_color("darkred");
             Console.WriteLine(" " +
                 "                     ▓▓                    \n" +
                 "                    ███                    \n" +
@@ -264,16 +264,16 @@ namespace PDF_6_Aufgabe_1 {
             // Quelle : http://www.buchstabenbildchen.de/hande/mittelfinger-3/
             // Nachträglich angepasst
 
-            Functions.fg_color(defaultColor);
+            Functions.FG_color(defaultColor);
         }
 
 
         // FORMEN
         //
         // Quadrat (mittels zweier Schleifen)
-        public static void quadrat(string defaultColor, string colorText, int size, char zeichen) {
+        public static void Quadrat(string defaultColor, string colorText, int size, char zeichen) {
 
-            Functions.fg_color(colorText);
+            Functions.FG_color(colorText);
             
 
             // for-Schleife
@@ -287,13 +287,13 @@ namespace PDF_6_Aufgabe_1 {
                 Console.Write("\n");
             }
             //Console.Write("\n\n");
-            Functions.fg_color(defaultColor);
+            Functions.FG_color(defaultColor);
         }
 
         // Dreieck RECHTS 
-        public static void dreieck_rechts(string defaultColor, string colorText, int size, char zeichen) {
+        public static void Dreieck_rechts(string defaultColor, string colorText, int size, char zeichen) {
 
-            Functions.fg_color(colorText);
+            Functions.FG_color(colorText);
 
             // for-Schleife (Höhe Reihe)
             for (int x = 0; x < size; x++) {
@@ -309,12 +309,12 @@ namespace PDF_6_Aufgabe_1 {
             }
 
             //Console.Write("\n\n");
-            Functions.fg_color(defaultColor);
+            Functions.FG_color(defaultColor);
         }
 
         // Dreieck LINKS
-        public static void dreieck_links(string defaultColor, string colorText, int size, char zeichen) {
-            Functions.fg_color(colorText);
+        public static void Dreieck_links(string defaultColor, string colorText, int size, char zeichen) {
+            Functions.FG_color(colorText);
             int x1, x2, x3, x4;
 
             // for-Schleife die in zwei Richtungen zählt
@@ -335,12 +335,12 @@ namespace PDF_6_Aufgabe_1 {
                 Console.Write("\n");
             }
             //Console.Write("\n\n");
-            Functions.fg_color(defaultColor);
+            Functions.FG_color(defaultColor);
         }
 
         // Pyramide
-        public static void pyramide(string defaultColor, string colorText, int size, char zeichen) {
-            Functions.fg_color(colorText);
+        public static void Pyramide(string defaultColor, string colorText, int size, char zeichen) {
+            Functions.FG_color(colorText);
             int x1, x2, x3, x4, x5;
 
             // Dreieck links und rechts werden in einer Schleife zusammengefasst
@@ -368,12 +368,12 @@ namespace PDF_6_Aufgabe_1 {
                 Console.Write("\n");
             }
             //Console.Write("\n\n");
-            Functions.fg_color(defaultColor);
+            Functions.FG_color(defaultColor);
         }
 
         // Pyramide gespiegelt
-        public static void pyramide_gespiegelt(string defaultColor, string colorText, int size, char zeichen) {
-            Functions.fg_color(colorText);
+        public static void Pyramide_gespiegelt(string defaultColor, string colorText, int size, char zeichen) {
+            Functions.FG_color(colorText);
             int x1, x2, x3, x4, x5;
 
             // Haupt for-Schleife
@@ -401,12 +401,12 @@ namespace PDF_6_Aufgabe_1 {
                 Console.Write("\n");
             }
             //Console.Write("\n\n");
-            Functions.fg_color(defaultColor);
+            Functions.FG_color(defaultColor);
         }
 
         // Slash (mittels zweier Schleifen)
-        public static void slash(string defaultColor, string colorText, int size, char zeichen) {
-            Functions.fg_color(colorText);
+        public static void Slash(string defaultColor, string colorText, int size, char zeichen) {
+            Functions.FG_color(colorText);
             int x1, x2;
 
             // rtretertrete
@@ -420,12 +420,12 @@ namespace PDF_6_Aufgabe_1 {
                 Console.Write(zeichen + "\n");
             }
             //Console.Write("\n\n");
-            Functions.fg_color(defaultColor);
+            Functions.FG_color(defaultColor);
         }
 
         // Backslash (mittels zweier Schleifen)
-        public static void backslash(string defaultColor, string colorText, int size, char zeichen) {
-            Functions.fg_color(colorText);
+        public static void Backslash(string defaultColor, string colorText, int size, char zeichen) {
+            Functions.FG_color(colorText);
             int x1, x2;
 
             // rtretertrete
@@ -439,7 +439,7 @@ namespace PDF_6_Aufgabe_1 {
                 Console.Write(zeichen + "\n");
             }
             //Console.Write("\n\n");
-            Functions.fg_color(defaultColor);
+            Functions.FG_color(defaultColor);
         }
 
 
