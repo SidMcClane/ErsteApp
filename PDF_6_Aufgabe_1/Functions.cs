@@ -59,6 +59,7 @@ namespace PDF_6_Aufgabe_1 {
                     break;
 
                 default:
+                    colorText = "white";
                     break;
             }
         }
@@ -236,7 +237,7 @@ namespace PDF_6_Aufgabe_1 {
         // Blutiger Mittelfinger
         public static void fuckfinger(string defaultColor) {
             Functions.fg_color("darkred");
-            Console.WriteLine("\n\n\n" +
+            Console.WriteLine(" " +
                 "                     ▓▓                    \n" +
                 "                    ███                    \n" +
                 "                    ███                    \n" +
@@ -278,12 +279,14 @@ namespace PDF_6_Aufgabe_1 {
             // for-Schleife
             for (int x = 0; x < size; x++) {
 
+                Console.Write("\t");
+
                 for (int y = 0; y < size; y++) {
                     Console.Write(zeichen + " ");
                 }
                 Console.Write("\n");
             }
-            Console.Write("\n\n");
+            //Console.Write("\n\n");
             Functions.fg_color(defaultColor);
         }
 
@@ -294,6 +297,9 @@ namespace PDF_6_Aufgabe_1 {
 
             // for-Schleife (Höhe Reihe)
             for (int x = 0; x < size; x++) {
+
+                Console.Write("\t");
+
                 // Anzahl Spalten
                 for (int y = 0; y <= x; y++) {
                     Console.Write(zeichen + " ");
@@ -302,7 +308,7 @@ namespace PDF_6_Aufgabe_1 {
                 Console.Write("\n");
             }
 
-            Console.Write("\n\n");
+            //Console.Write("\n\n");
             Functions.fg_color(defaultColor);
         }
 
@@ -315,6 +321,8 @@ namespace PDF_6_Aufgabe_1 {
             // max->min und min->max
             for (x1 = size, x3 = 0; x1 > 0 || x3 <= size; x1--, x3++) { //                  (x3 <= size für die volle Größe)
 
+                Console.Write("\t");
+
                 // for-Schleife von max->min (fügt Leerzeichen ein bis Zähler auf max)
                 for (x2 = x1; x2 > 0; x2--) {
                     Console.Write(" " + " ");
@@ -326,7 +334,7 @@ namespace PDF_6_Aufgabe_1 {
                 // neue Zeile
                 Console.Write("\n");
             }
-            Console.Write("\n\n");
+            //Console.Write("\n\n");
             Functions.fg_color(defaultColor);
         }
 
@@ -337,6 +345,8 @@ namespace PDF_6_Aufgabe_1 {
 
             // Dreieck links und rechts werden in einer Schleife zusammengefasst
             for (x1 = size, x3 = 0; x1 > 0 || x3 < size; x1--, x3++) {
+
+                Console.Write("\t");
 
                 // Leerzeichen bis zum ersten Füllzeichen
                 for (x2 = x1; x2 > 0; x2--) {
@@ -357,7 +367,7 @@ namespace PDF_6_Aufgabe_1 {
                 }
                 Console.Write("\n");
             }
-            Console.Write("\n\n");
+            //Console.Write("\n\n");
             Functions.fg_color(defaultColor);
         }
 
@@ -368,6 +378,8 @@ namespace PDF_6_Aufgabe_1 {
 
             // Haupt for-Schleife
             for (x1 = 0, x3 = size; x1 < size +1 || x3 > 0; x1++, x3--) {
+
+                Console.Write("\t");
 
                 // Leerzeichen bis zum ersten Füllzeichen
                 for (x2 = x1; x2 > 0; x2--) {
@@ -388,7 +400,7 @@ namespace PDF_6_Aufgabe_1 {
                 }
                 Console.Write("\n");
             }
-            Console.Write("\n\n");
+            //Console.Write("\n\n");
             Functions.fg_color(defaultColor);
         }
 
@@ -400,12 +412,14 @@ namespace PDF_6_Aufgabe_1 {
             // rtretertrete
             for (x1 = size ; x1 > 0; x1--) {
 
+                Console.Write("\t");
+
                 for (x2 = x1; x2 > 0; x2-- ) {
                     Console.Write(" " + " ");
                 }
                 Console.Write(zeichen + "\n");
             }
-            Console.Write("\n\n");
+            //Console.Write("\n\n");
             Functions.fg_color(defaultColor);
         }
 
@@ -417,12 +431,14 @@ namespace PDF_6_Aufgabe_1 {
             // rtretertrete
             for (x1 = 0; size > x1; x1++) {
 
+                Console.Write("\t");
+
                 for (x2 = 0; x1 > x2; x2++) {
                     Console.Write(" " + " ");
                 }
                 Console.Write(zeichen + "\n");
             }
-            Console.Write("\n\n");
+            //Console.Write("\n\n");
             Functions.fg_color(defaultColor);
         }
 
