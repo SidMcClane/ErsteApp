@@ -181,9 +181,9 @@ namespace PDF_6_Aufgabe_1 {
 
         // [Aufgabe 2] Quadrat und Kubik Rechner
         public static void QuadKubRechner() {
-            int basisNum;
-            int quadNum;
-            int kubNum;
+            double basisNum;
+            double quadNum;
+            double kubNum;
             bool quadkubLoop = true;
 
 
@@ -191,14 +191,14 @@ namespace PDF_6_Aufgabe_1 {
                 Console.Clear();
 
                 Console.Write("\n\n\n\tGib eine Basis ein: ");
-                basisNum = Convert.ToInt32(Console.ReadLine());
+                basisNum = Convert.ToDouble(Console.ReadLine());
 
                 quadNum = basisNum * basisNum;
                 kubNum = quadNum * basisNum;
 
                 Console.WriteLine("\n" +
-                    "\tQuadrat:\t" + quadNum + "\n" +
-                    "\tKubik:\t\t" + kubNum + "\n\n");
+                    "\tQuadrat:\t{0,-6:f2}\n"+
+                    "\tKubik:\t\t{1,-6:f2}\n\n", quadNum, kubNum);
 
                 Console.Write("\tWillste noch eine machen? (y/n) ");
                 switch (Console.ReadLine()) {
@@ -219,25 +219,25 @@ namespace PDF_6_Aufgabe_1 {
         public static void BasisPotenz() {
             double basis;
             double potenz;
-            double ergebnis = 0;
+            double ergebnis;
             bool basisPotenzLoop = true;
 
             while (basisPotenzLoop) {
                 Console.Clear();
 
                 Console.Write("\n\n\n\tGib eine Basis ein: ");
-                basis = Convert.ToInt32(Console.ReadLine());
+                basis = Convert.ToDouble(Console.ReadLine());
                 Console.Write("\n\tGib eine Potenz ein: ");
-                potenz = Convert.ToInt32(Console.ReadLine());
+                potenz = Convert.ToDouble(Console.ReadLine());
 
                 ergebnis = basis;
 
                 for (double i = potenz; i > 1; i--) {
-                    ergebnis = ergebnis * basis; 
+                    ergebnis *= basis; 
                 }
 
 
-                Console.WriteLine("\n\tErgebnis: " + ergebnis + "\n\n");
+                Console.WriteLine("\n\tErgebnis: {0,-6:f2}\n\n\n", ergebnis);
 
                 Console.Write("\tWillste noch eine machen? (y/n) ");
                 switch (Console.ReadLine()) {
@@ -249,6 +249,28 @@ namespace PDF_6_Aufgabe_1 {
                 }
 
             }
+        }
+
+
+
+
+
+
+        // [ = Sandbox = ]
+        public static void Prime() {
+            bool primeLoop = true;
+
+            while (primeLoop) {
+
+                Console.WriteLine("\n\n\n\tLos gehts - Wieviel durchläufe schaffst du? - ");
+                int loops = Convert.ToInt32(Console.ReadLine());
+
+                for (int i = 0; i < loops; i++) {
+                    if (true) {
+
+                    }
+
+                }
 
 
 
@@ -261,7 +283,15 @@ namespace PDF_6_Aufgabe_1 {
 
 
 
-
+                Console.Write("\tWillste weiter machen? (y/n) ");
+                switch (Console.ReadLine()) {
+                    case "n":
+                        primeLoop = false;
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 }
