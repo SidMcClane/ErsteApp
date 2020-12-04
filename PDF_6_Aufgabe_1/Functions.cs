@@ -5,8 +5,8 @@ using System.Text;
 namespace PDF_6_Aufgabe_1 {
     class Functions {
 
-        // Farbnummer -> Farbname
-        public static void FigureColor(string colorNum, ref string colorText) {
+        // Farbnummer -> Farbname (alte Version mit Ref Variablen)
+        /*public static void FigureColor(string colorNum, ref string colorText) {
             
             switch (colorNum) {
                 case "1":
@@ -61,6 +61,66 @@ namespace PDF_6_Aufgabe_1 {
                 default:
                     colorText = "white";
                     break;
+            }
+        }*/
+
+        // Farbnummer -> Farbname
+        public static string FigureColor(string colorNum) {
+            string colorText;
+
+            switch (colorNum) {
+                case "1":
+                    colorText = "black";
+                    return colorText;
+                case "2":
+                    colorText = "darkgray";
+                    return colorText;
+                case "3":
+                    colorText = "gray";
+                    return colorText;
+                case "4":
+                    colorText = "darkblue";
+                    return colorText;
+                case "5":
+                    colorText = "blue";
+                    return colorText;
+                case "6":
+                    colorText = "darkgreen";
+                    return colorText;
+                case "7":
+                    colorText = "green";
+                    return colorText;
+                case "8":
+                    colorText = "darkcyan";
+                    return colorText;
+                case "9":
+                    colorText = "cyan";
+                    return colorText;
+                case "10":
+                    colorText = "darkred";
+                    return colorText;
+                case "11":
+                    colorText = "red";
+                    return colorText;
+                case "12":
+                    colorText = "darkmagenta";
+                    return colorText;
+                case "13":
+                    colorText = "magenta";
+                    return colorText;
+                case "14":
+                    colorText = "darkyellow";
+                    return colorText;
+                case "15":
+                    colorText = "yellow";
+                    return colorText;
+                case "16":
+                    colorText = "white";
+                    return colorText;
+
+                default:
+                    colorText = "white";
+                    return colorText;
             }
         }
 

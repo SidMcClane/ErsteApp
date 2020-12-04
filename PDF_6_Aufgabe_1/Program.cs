@@ -62,8 +62,10 @@ namespace PDF_6_Aufgabe_1 {
             string defaultColor = "darkgreen";                                  // Programm-Schriftfarbe (default)
             string colorNum;                                                    // (Form)Farben Nummer
             string colorText = "";                                              // (Form)Farben Name
+            string sizeStr;
             int size;                                                           // Form Größe z.B. 5, 10 oder 20
-            char zeichen;                                                       // Form Füllzeichen z.B. #, +, *, ...
+            string zeichenStr;                                                  // Form Füllzeichen z.B. #, +, *, ...
+            char zeichen = '*';
             string shapeNum;                                                    // Form Nummer
             bool shapeLoop = true;                                              // ProgramLoop till false
 
@@ -93,18 +95,34 @@ namespace PDF_6_Aufgabe_1 {
                     "\t[13]Magenta\t\t[14]DarkYellow\t\t[15]Yellow\t\t[16]White\n");
 
                 // Eingabeaufforderung der Farb-Nummer
+                // !!!Sicher!!! Wird in ein SwitchCase geschickt und hat bei Falscheingabe ein default
                 Console.Write("\tBitte entsprechende Nummer eingeben: ");
                 colorNum = Console.ReadLine();                                      // Farbnummer (string)
                 // Nummereingabe in ausgeschriebenen Farbnamen umwandeln (string)
-                Functions.FigureColor(colorNum, ref colorText);                     // Farbname (string)
+                colorText = Functions.FigureColor(colorNum);                        // Farbname (string)
 
                 // Eingabeaufforderung des Füllzeichens
                 Console.Write("\n\tFüllzeichen der Form eingeben: ");
-                zeichen = Convert.ToChar(Console.ReadLine());                       // Füllzeichen (Char)
+                zeichenStr = Console.ReadLine();
+                if (string.IsNullOrEmpty(zeichenStr)) {
+                    zeichen = '*';
+                } else {
+                    zeichen = Convert.ToChar(zeichenStr[0]);                        // Füllzeichen (Char)
+                }
 
                 // Eingabeaufforderung Formgröße
                 Console.Write("\n\tGröße der Form eingeben: ");
-                size = Convert.ToInt32(Console.ReadLine());                         // Größe (size) (int)
+                sizeStr = Console.ReadLine();
+                if (string.IsNullOrEmpty(sizeStr)) {
+                    size = 20;
+                } else if (int.TryParse(sizeStr, out int result)) {
+                    size = Convert.ToInt32(sizeStr);                                // Größe (size) (int)
+                } else {
+                    size = 20;
+                }
+                if (size >=30 || size <=3) {
+                    size = 20;
+                }
                 Console.Clear();
 
 
@@ -160,6 +178,7 @@ namespace PDF_6_Aufgabe_1 {
 
                     default:
                         Functions.Fuckfinger(defaultColor);
+                        Console.WriteLine("\tFalscheingabe! Nimm was aus der Liste!");
                         break;
                 }
 
