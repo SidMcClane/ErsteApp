@@ -31,24 +31,23 @@ namespace PDF_7_Aufgabe_4_Forms {
         }
 
         private void btnMul_Click(object sender, EventArgs e) {
-            double zahl01 = Convert.ToDouble(tbMulDiv1.Text);
-            double zahl02 = Convert.ToDouble(tbMulDiv2.Text);
-            lblOutputMulDiv.Text = "= " + Convert.ToString(Multiplizieren(zahl01, zahl02));
+            // double zahl01 = Convert.ToDouble(tbMulDiv1.Text);
+            // double zahl02 = Convert.ToDouble(tbMulDiv2.Text);
+            // lblOutputMulDiv.Text = "= " + Convert.ToString(Multiplizieren(zahl01, zahl02));
+            lblOutputMulDiv.Text = "= " + (Multiplizieren(double.Parse(tbMulDiv1.Text), double.Parse(tbMulDiv2.Text))).ToString();
         }
 
         private void btnDiv_Click(object sender, EventArgs e) {
-            double zahl01 = Convert.ToDouble(tbMulDiv1.Text);
-            double zahl02 = Convert.ToDouble(tbMulDiv2.Text);
-            lblOutputMulDiv.Text = "= " + Convert.ToString(Dividieren(zahl01, zahl02));
+            // double zahl01 = Convert.ToDouble(tbMulDiv1.Text);
+            // double zahl02 = Convert.ToDouble(tbMulDiv2.Text);
+            // lblOutputMulDiv.Text = "= " + Convert.ToString(Dividieren(zahl01, zahl02));
+            lblOutputMulDiv.Text = "= " + (Dividieren(double.Parse(tbMulDiv1.Text), double.Parse(tbMulDiv2.Text))).ToString();
         }
 
         private void btnFak_Click(object sender, EventArgs e) {
-            ushort zahl03 = Convert.ToUInt16(tbFak.Text);
-            lblOutputFak.Text = "= " + Convert.ToString(Fakultaet(zahl03));
-        }
-
-        private void Form1_Load(object sender, EventArgs e) {
-
+            // ushort zahl03 = Convert.ToUInt16(tbFak.Text);
+            // lblOutputFak.Text = "= " + Convert.ToString(Fakultaet(zahl03));
+            lblOutputFak.Text = "= " + (Fakultaet(ushort.Parse(tbFak.Text))).ToString();
         }
     }
 }

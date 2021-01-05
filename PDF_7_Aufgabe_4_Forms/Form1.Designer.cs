@@ -63,7 +63,7 @@ namespace PDF_7_Aufgabe_4_Forms {
             this.tbFak.Location = new System.Drawing.Point(94, 96);
             this.tbFak.Name = "tbFak";
             this.tbFak.Size = new System.Drawing.Size(78, 20);
-            this.tbFak.TabIndex = 5;
+            this.tbFak.TabIndex = 4;
             // 
             // lblMulDiv
             // 
@@ -108,7 +108,7 @@ namespace PDF_7_Aufgabe_4_Forms {
             this.btnMul.Location = new System.Drawing.Point(13, 24);
             this.btnMul.Name = "btnMul";
             this.btnMul.Size = new System.Drawing.Size(75, 23);
-            this.btnMul.TabIndex = 12;
+            this.btnMul.TabIndex = 2;
             this.btnMul.Text = "Multiplizieren";
             this.btnMul.UseVisualStyleBackColor = true;
             this.btnMul.Click += new System.EventHandler(this.btnMul_Click);
@@ -118,7 +118,7 @@ namespace PDF_7_Aufgabe_4_Forms {
             this.btnFak.Location = new System.Drawing.Point(13, 94);
             this.btnFak.Name = "btnFak";
             this.btnFak.Size = new System.Drawing.Size(75, 23);
-            this.btnFak.TabIndex = 13;
+            this.btnFak.TabIndex = 5;
             this.btnFak.Text = "Fakultät";
             this.btnFak.UseVisualStyleBackColor = true;
             this.btnFak.Click += new System.EventHandler(this.btnFak_Click);
@@ -128,7 +128,7 @@ namespace PDF_7_Aufgabe_4_Forms {
             this.btnDiv.Location = new System.Drawing.Point(13, 53);
             this.btnDiv.Name = "btnDiv";
             this.btnDiv.Size = new System.Drawing.Size(75, 23);
-            this.btnDiv.TabIndex = 14;
+            this.btnDiv.TabIndex = 3;
             this.btnDiv.Text = "Dividieren";
             this.btnDiv.UseVisualStyleBackColor = true;
             this.btnDiv.Click += new System.EventHandler(this.btnDiv_Click);
@@ -154,7 +154,6 @@ namespace PDF_7_Aufgabe_4_Forms {
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MulDivFak-Rechner";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
