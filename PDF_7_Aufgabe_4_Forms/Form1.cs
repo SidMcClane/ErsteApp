@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace PDF_7_Aufgabe_4_Forms {
     public partial class Form1 : Form {
+
+        Form2 view;
         public Form1() {
             InitializeComponent();
+            view = new Form2(this);
         }
 
 
@@ -48,6 +51,11 @@ namespace PDF_7_Aufgabe_4_Forms {
             // ushort zahl03 = Convert.ToUInt16(tbFak.Text);
             // lblOutputFak.Text = "= " + Convert.ToString(Fakultaet(zahl03));
             lblOutputFak.Text = "= " + (Fakultaet(ushort.Parse(tbFak.Text))).ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            this.Hide();
+            view.Show();
         }
     }
 }

@@ -37,6 +37,7 @@ namespace PDF_7_Aufgabe_4_Forms {
             this.btnMul = new System.Windows.Forms.Button();
             this.btnFak = new System.Windows.Forms.Button();
             this.btnDiv = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbMulDiv1
@@ -133,11 +134,22 @@ namespace PDF_7_Aufgabe_4_Forms {
             this.btnDiv.UseVisualStyleBackColor = true;
             this.btnDiv.Click += new System.EventHandler(this.btnDiv_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(387, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 136);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDiv);
             this.Controls.Add(this.btnFak);
             this.Controls.Add(this.btnMul);
@@ -172,6 +184,6 @@ namespace PDF_7_Aufgabe_4_Forms {
         private System.Windows.Forms.Button btnMul;
         private System.Windows.Forms.Button btnFak;
         private System.Windows.Forms.Button btnDiv;
+        private System.Windows.Forms.Button button1;
     }
 }
-
