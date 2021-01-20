@@ -4,10 +4,10 @@ using System.Text;
 
 namespace TemperaturRechner {
     class Functions {
-
+        private const float NULL_KELVIN = 273.15f;
         // FUNKTIONSSAMMLUNG
         public static void mainUmrechner(float convInKelvin) {
-            float convInCelsius = convInKelvin - 273.15f;
+            float convInCelsius = convInKelvin - NULL_KELVIN;
             float convInFahrenheit = convInKelvin * 1.8f - 459.67f;
             float convInReaumur = (convInKelvin - 273.15f) * 0.8f;
             /*Console.WriteLine("Kelvin " + convInKelvin);
@@ -34,7 +34,7 @@ namespace TemperaturRechner {
             mainUmrechner(tempWert);
         }
         public static void tempCelsius(float tempWert) {
-            float convInKelvin = tempWert + 273.15f;
+            float convInKelvin = tempWert + NULL_KELVIN;
             mainUmrechner(convInKelvin);
         }
         public static void tempFahrenheit(float tempWert) {
