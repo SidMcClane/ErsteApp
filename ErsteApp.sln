@@ -23,8 +23,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDF7_3 (Nimm Spiel)", "PDF7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "_Sandbox\Sandbox.csproj", "{FEE66451-0169-483E-981A-92E2F8252216}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NimmProjekt", "..\NimmProjekt\NimmProjekt\NimmProjekt.csproj", "{F4777787-832A-42BD-8576-606804F4E99A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,10 +69,6 @@ Global
 		{FEE66451-0169-483E-981A-92E2F8252216}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEE66451-0169-483E-981A-92E2F8252216}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEE66451-0169-483E-981A-92E2F8252216}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4777787-832A-42BD-8576-606804F4E99A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4777787-832A-42BD-8576-606804F4E99A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4777787-832A-42BD-8576-606804F4E99A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4777787-832A-42BD-8576-606804F4E99A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
