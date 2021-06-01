@@ -5,7 +5,14 @@ using System.Runtime.CompilerServices;
 namespace Bedingte_Formatierung {
     class Program {
         static void Main(string[] args) {
-            
+
+
+            int a = 5;
+            int b = 8;
+            if (a==b) {
+                Console.WriteLine("true");
+            }
+
 
 
 
