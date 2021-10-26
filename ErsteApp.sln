@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDF7_3 (Nimm Spiel)", "PDF7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "_Sandbox\Sandbox.csproj", "{FEE66451-0169-483E-981A-92E2F8252216}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Übung_09092021", "Übung_09092021\Übung_09092021.csproj", "{F0487089-AAAA-420B-BC0C-D53D69165284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adressverwaltung", "Adressverwaltung\Adressverwaltung.csproj", "{7EE79F62-450F-48A8-AEC8-45CD82E1794C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{FEE66451-0169-483E-981A-92E2F8252216}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEE66451-0169-483E-981A-92E2F8252216}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEE66451-0169-483E-981A-92E2F8252216}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0487089-AAAA-420B-BC0C-D53D69165284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0487089-AAAA-420B-BC0C-D53D69165284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0487089-AAAA-420B-BC0C-D53D69165284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0487089-AAAA-420B-BC0C-D53D69165284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE79F62-450F-48A8-AEC8-45CD82E1794C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE79F62-450F-48A8-AEC8-45CD82E1794C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE79F62-450F-48A8-AEC8-45CD82E1794C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE79F62-450F-48A8-AEC8-45CD82E1794C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
