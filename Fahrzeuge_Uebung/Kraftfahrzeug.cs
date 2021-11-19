@@ -15,7 +15,11 @@ namespace Fahrzeuge_Uebung {
         }
 
         public override void methoden_name() {
-            
+            base.methoden_name();
+        }
+
+        public override string ToString() {
+            return $"Kraftfahrzeug hat eine Höchstgeschwindigkeit von: {hoechstgeschwindigkeit}";
         }
     }
 }

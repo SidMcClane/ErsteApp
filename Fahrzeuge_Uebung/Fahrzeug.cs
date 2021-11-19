@@ -23,5 +23,20 @@ namespace Fahrzeuge_Uebung {
         public virtual void methoden_name() { 
             // Irgend eine Funktion
         }
+
+
+        //Methoden überladen
+        public void berechnen(int a) { 
+            // Berechnung von Ganzzahlen
+        }
+
+        public void berechnen(float b) { 
+            // Berechnen von Gleitkommazahlen
+        }
+
+        public override string ToString() {
+            return base.ToString();
+
+        }
     }
 }
