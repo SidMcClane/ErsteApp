@@ -11,7 +11,10 @@ namespace Fahrzeuge_Uebung {
         float leergewicht;
         float zulaessigesGesamtgewicht;
         float zuladung;
+        public bool motor { set; get; } = false;
 
+
+        // Konstruktor
         public Fahrzeug(float leergewicht, float zulaessigesGesamtgewicht, float zuladung) {
             this.fahrzeugnummer = ++autoNummer;
             this.leergewicht = leergewicht;
@@ -19,6 +22,8 @@ namespace Fahrzeuge_Uebung {
             this.zuladung = zuladung;
             
         }
+
+
 
         public virtual void methoden_name() { 
             // Irgend eine Funktion
@@ -33,6 +38,7 @@ namespace Fahrzeuge_Uebung {
         public void berechnen(float b) { 
             // Berechnen von Gleitkommazahlen
         }
+
 
         public override string ToString() {
             return base.ToString();

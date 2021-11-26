@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benutzer", "Benutzer\Benutz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fahrzeuge_Uebung", "Fahrzeuge_Uebung\Fahrzeuge_Uebung.csproj", "{BA058246-75B7-4327-8442-1413C77765EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoogeschaeft_26.11.2021", "Zoogeschaeft_26.11.2021\Zoogeschaeft_26.11.2021.csproj", "{B0663229-97C0-4877-A73C-8E6DF6D3D717}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{BA058246-75B7-4327-8442-1413C77765EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA058246-75B7-4327-8442-1413C77765EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA058246-75B7-4327-8442-1413C77765EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0663229-97C0-4877-A73C-8E6DF6D3D717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0663229-97C0-4877-A73C-8E6DF6D3D717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0663229-97C0-4877-A73C-8E6DF6D3D717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0663229-97C0-4877-A73C-8E6DF6D3D717}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

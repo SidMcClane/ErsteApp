@@ -8,12 +8,17 @@ namespace Fahrzeuge_Uebung {
     class Kraftfahrzeug : Fahrzeug {
         int hoechstgeschwindigkeit;
         int leistung;
+        
 
-        public Kraftfahrzeug(int hoechstgeschwindigkeit, int leistung, float leergewicht, float zulaessigesGesamtgewicht, float zuladung) : base(leergewicht, zulaessigesGesamtgewicht, zuladung) {
+        // Konstruktor
+        public Kraftfahrzeug(int hoechstgeschwindigkeit, int leistung, float leergewicht, float zulaessigesGesamtgewicht, float zuladung) : base( leergewicht, zulaessigesGesamtgewicht, zuladung) {
             this.hoechstgeschwindigkeit = hoechstgeschwindigkeit;
             this.leistung = leistung;
+            base.motor = true;
         }
 
+
+        // Methoden
         public override void methoden_name() {
             base.methoden_name();
         }

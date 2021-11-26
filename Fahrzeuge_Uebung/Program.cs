@@ -17,13 +17,14 @@ namespace Fahrzeuge_Uebung {
             Pkw meinAuto = new Pkw(5, 120, 88, 1200, 1500, 300);
             Lkw truck = new Lkw(18.6f, 80, 500, 20000, 40000, 20000);
 
+
             Console.WriteLine(meinAuto);
 
-            /*
-                        Application.EnableVisualStyles();
-                        Application.SetCompatibleTextRenderingDefault(false);
-                        Application.Run(new Form1());
-            */
+/*
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
+*/
 
             Console.ReadKey();
 
