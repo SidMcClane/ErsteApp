@@ -50,7 +50,7 @@ Tier    - Fisch
 
 namespace Zoogeschaeft_26._11._2021 {
     public abstract class Tier {
-        int nummer;
+        protected int nummer;
         private static int id = 0;
         float preis;
         float groesse;

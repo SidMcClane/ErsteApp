@@ -18,5 +18,8 @@ namespace Zoogeschaeft_26._11._2021 {
             this.abAchtzehn = abAchtzehn;
             this.keinEintrag = keinEintrag;
         }
+
+
+
     }
 }
